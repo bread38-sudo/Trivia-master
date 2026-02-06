@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <!-- TOPIC SCREEN -->
+  <div class="quiz-card" id="topicScreen">
+    <b><h1 style="color:aqua">TRIVIA-MASTER</h1></b>
+    <h1>Select a Topic</h1>
+
+    <div class="option" onclick="startQuiz('science')">Science</div>
+    <div class="option" onclick="startQuiz('weaponry')">Weaponry</div>
+    <div class="option" onclick="startQuiz('sports')">Sports</div>
+    <div class="option" onclick="startQuiz('interstellar')">Interstellar</div>
+    <div class="option" onclick="startQuiz('videogames')">Video Games</div>
+  </div>
+
+  <!-- QUIZ SCREEN -->
+  <div class="quiz-card" id="quizScreen" style="display:none;">
+    <h1 id="topicTitle"></h1>
+
+    <div id="stats">
+      <span id="score">Score: 0</span><br>
+      <span id="attempts">Attempts: 0</span><br>
+      <span id="timer">15s</span><br>
+
+    </div>
+
+    <div id="progressBar">
+      <div id="progress"></div>
+    </div>
+
+
+    <div id="question"></div>
+    <div id="options"></div>
+
+
+    <button id="nextBtn">Next</button>
+    <button onclick="location.reload()">Wanna try again?</button>
+  </div>
+
+  <div id="leaderboardScreen" class="screen" style="display:none;">
+    <h2>Leaderboard</h2>
+    <ul id="leaderboardList"></ul>
+    <button onclick="location.reload()">Wanna try again?</button>
+  </div>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
